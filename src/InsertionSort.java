@@ -7,12 +7,11 @@ public class InsertionSort {
 		//插入排序
 		for (int i = 1; i < arr.length; i++) {
 			int index=i-1;
-			int min=arr[i];
-			while( index>=0 && arr[index]>min){
+			while( index>=0 && arr[index]>arr[i]){
 				arr[index+1]=arr[index];
 				index--;
 			}
-			arr[index+1]=min;
+			arr[index+1]=arr[i];
 		}
 		System.out.println(Arrays.toString(arr));
 	}
